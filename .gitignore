@@ -70,3 +70,10 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+
+
+
+# ==== YOUR IGNORE EXTENSIONS ======
+
+/Assets/_Tests
+/Assets/_Tests.meta
