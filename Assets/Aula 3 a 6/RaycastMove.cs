@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class RaycastMove : MonoBehaviour
 {
@@ -72,12 +73,17 @@ public class RaycastMove : MonoBehaviour
 
                     posInicial = personagemSelecionado.transform.position;
                     posFinal = objHit.point;
+
+
+                    personagemSelecionado.GetComponent<NavMeshAgent>().SetDestination(posFinal);
+
                     distancia = Vector3.Distance(posInicial, posFinal);
                 }                
             }
         }
 
         //Mover
+        /*
         if(personagemSelecionado != null && podeMover)
         {
             lerp += velocidadeMover * Time.deltaTime / distancia;
@@ -94,5 +100,6 @@ public class RaycastMove : MonoBehaviour
                 podeMover = false;
             }
         }
+        */
     }
 }
